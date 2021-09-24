@@ -4,11 +4,62 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>CVC Japan</title>
+                <link rel="icon" href="/logo.png" />
             </Head>
 
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+                <link
+                    href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
+                    rel="stylesheet"
+                    type="text/css"
+                />
+                <div id="mc_embed_signup">
+                    <form
+                        action="https://cvcjp.us5.list-manage.com/subscribe/post?u=5dec989adf2fb67035d4b7bfb&amp;id=2363abf302"
+                        method="post"
+                        id="mc-embedded-subscribe-form"
+                        name="mc-embedded-subscribe-form"
+                        class="validate"
+                        target="_blank"
+                        novalidate
+                    >
+                        <div id="mc_embed_signup_scroll">
+                            <input
+                                type="email"
+                                name="EMAIL"
+                                class="email"
+                                id="mce-EMAIL"
+                                placeholder="email address"
+                                required
+                            />
+                            <div
+                                style={
+                                    ({ position: "absolute" },
+                                    { left: "-5000px" })
+                                }
+                                aria-hidden="true"
+                            >
+                                <input
+                                    type="text"
+                                    name="b_5dec989adf2fb67035d4b7bfb_2363abf302"
+                                    tabindex="-1"
+                                    value=""
+                                />
+                            </div>
+                            <div class="clear">
+                                <input
+                                    type="submit"
+                                    value="Subscribe"
+                                    name="subscribe"
+                                    id="mc-embedded-subscribe"
+                                    class="button"
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
                 <h1 className="text-6xl font-bold">
                     Welcome to{" "}
                     <a className="text-blue-600" href="https://nextjs.org">

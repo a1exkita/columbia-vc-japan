@@ -23,7 +23,7 @@ export const NAVIGATION = [
     },
     {
         name: "Contact",
-        route: "/contact",
+        route: "https://us5.list-manage.com/contact-form?u=5dec989adf2fb67035d4b7bfb&form_id=f3f793cd9591f57eb5ecb97eec1488b8",
     },
 ];
 
