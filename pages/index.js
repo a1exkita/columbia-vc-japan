@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
     return (
@@ -7,6 +8,7 @@ export default function Home() {
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
             </Head>
+            <Navbar />
 
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
                 <link
