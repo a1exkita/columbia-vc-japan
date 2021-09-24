@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { gql } from "graphql-request";
-import { graphcms } from "../lib/_graphcms";
 
 export default function Home() {
     return (
@@ -91,19 +89,4 @@ export default function Home() {
             </footer>
         </div>
     );
-}
-
-export async function getStaticProps() {
-    const { members } = gql`
-        {
-            members {
-                name
-            }
-        }
-    `;
-    return {
-        props: {
-            members,
-        },
-    };
 }
