@@ -13,7 +13,7 @@ export default function members({ data }) {
                 Here’s the list of CVC Japan members. Feel free to send
                 messages.
             </h5>
-            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4  p-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
                 {data.members.map((member) => (
                     <div key={member.slug}>
                         <a href={"/members/" + member.slug}>
