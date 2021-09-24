@@ -101,6 +101,6 @@ export const getStaticPaths = async () => {
         paths: data.events.map((event) => ({
             params: { slug: event.slug },
         })),
-        fallback: "blocking",
+        fallback: false,
     };
 };
