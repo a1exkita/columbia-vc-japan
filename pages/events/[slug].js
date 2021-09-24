@@ -2,6 +2,7 @@ import { gql } from "graphql-request";
 import { graphcms } from "../../lib/_graphcms";
 import parse from "html-react-parser";
 import Navbar from "../../components/Navbar";
+import Head from "next/head";
 
 const enum_type = {
     GUEST_SPEAKER: "Guest Speaker",
@@ -15,6 +16,10 @@ export default function events({ event }) {
     });
     return (
         <div className="h-full w-full bg-black pb-8">
+            <Head>
+                <title>CVC Japan</title>
+                <link rel="icon" href="/logo.png" />
+            </Head>
             <Navbar />
             <div className="text-white font-sans font-extrabold mx-8 pt-32">
                 <a className="m-4" href="/events">

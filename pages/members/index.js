@@ -1,10 +1,15 @@
 import { gql } from "graphql-request";
 import { graphcms } from "../../lib/_graphcms";
 import Navbar from "../../components/Navbar";
+import Head from "next/head";
 
 export default function members({ data }) {
     return (
         <div className="flex flex-col bg-black absolute">
+            <Head>
+                <title>CVC Japan</title>
+                <link rel="icon" href="/logo.png" />
+            </Head>
             <Navbar />
             <h1 className="font-serif font-extrabold text-5xl ml-8 mt-32 text-white">
                 Members

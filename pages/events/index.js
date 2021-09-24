@@ -1,6 +1,7 @@
 import { gql } from "graphql-request";
 import { graphcms } from "../../lib/_graphcms";
 import Navbar from "../../components/Navbar";
+import Head from "next/head";
 
 const enum_type = {
     GUEST_SPEAKER: "Guest Speaker",
@@ -13,6 +14,10 @@ export default function events({ data }) {
 
     return (
         <div className="flex flex-col bg-black absolute w-full">
+            <Head>
+                <title>CVC Japan</title>
+                <link rel="icon" href="/logo.png" />
+            </Head>
             <Navbar />
             <h1 className="font-serif font-extrabold text-5xl ml-8 mt-32 text-white">
                 Events
@@ -54,12 +59,18 @@ export default function events({ data }) {
                                     <p className="my-4 font-sans fonts-medium text-sm w-7/12 mt-8">
                                         {event.summary}
                                     </p>
-                                    <a href={event.registrationLink}>
+                                    {/* <a href={event.registrationLink}>
                                         <div className="rounded bg-blue-highlight text-black w-36 h-12 justify-center iteams-center flex-col flex">
                                             <p className="text-md font-sans font-extrabold text-black text-center">
                                                 REGISTER
                                             </p>
                                         </div>
+                                    </a> */}
+                                    <a href="https://www.buymeacoffee.com/cvcjp">
+                                        <img
+                                            className="w-40"
+                                            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                        />
                                     </a>
                                 </div>
                             </div>
@@ -97,6 +108,12 @@ export default function events({ data }) {
                                     <p className="my-4 font-sans fonts-medium text-sm w-7/12 mt-8">
                                         {event.summary}
                                     </p>
+                                    <a href="https://www.buymeacoffee.com/cvcjp">
+                                        <img
+                                            className="w-40"
+                                            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         </div>

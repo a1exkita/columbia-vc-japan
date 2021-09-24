@@ -2,6 +2,7 @@
 import { gql } from "graphql-request";
 import Navbar from "../../components/Navbar";
 import { graphcms } from "../../lib/_graphcms";
+import Head from "next/head";
 
 const socialIcons = [
     {
@@ -21,6 +22,10 @@ const socialIcons = [
 export default function members({ member }) {
     return (
         <div className="absolute h-full bg-black">
+            <Head>
+                <title>CVC Japan</title>
+                <link rel="icon" href="/logo.png" />
+            </Head>
             <Navbar />
             <div className="flex flex-col">
                 <div className="text-white font-sans font-extrabold mx-8 my-6 mt-32">
