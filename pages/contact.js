@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 
 export default function Contact() {
     const form = useRef();
+    const [toast, setToast] = useState(0);
+    const [err, setErr] = useState(0);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -19,12 +21,18 @@ export default function Contact() {
             .then(
                 (result) => {
                     console.log(result.text);
+                    setToast(1);
+                    setErr(0);
+                    form.current.reset();
+                    setTimeout(function () {
+                        setToast(0);
+                    }, 2000);
                 },
                 (error) => {
                     console.log(error.text);
+                    setErr(1);
                 }
             );
-        form.current.reset();
     };
 
     return (
@@ -35,16 +43,26 @@ export default function Contact() {
                 <link rel="icon" href="/logo.png" />
             </Head>
             <div className="flex flex-col items-center justify-center pt-36 ">
-                <div class="w-full max-w-xs">
+                {toast && (
+                    <p className="border-t-4 bg-green-300 border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md">
+                        Sent message!
+                    </p>
+                )}
+                {err && (
+                    <p className="border-t-4 bg-red-300 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md">
+                        Failed to send message. Check your connection.
+                    </p>
+                )}
+                <div class="w-full max-w-3xl">
                     <form
                         form
                         ref={form}
                         onSubmit={sendEmail}
-                        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                        class="px-8 pt-6 pb-8 mb-4"
                     >
                         <div class="mb-4">
                             <label
-                                class="block text-gray-700 text-sm font-bold mb-2 font-sans font-extrabold"
+                                class="block text-white text-sm mb-2 font-sans font-extrabold"
                                 for="username"
                             >
                                 Name
@@ -59,7 +77,7 @@ export default function Contact() {
                         </div>
                         <div class="mb-6">
                             <label
-                                class="block text-gray-700 text-sm font-bold mb-2"
+                                class="block text-white text-sm mb-2 font-sans font-extrabold"
                                 for="email"
                             >
                                 Email
@@ -74,13 +92,13 @@ export default function Contact() {
                         </div>
                         <div class="mb-6">
                             <label
-                                class="block text-gray-700 text-sm font-bold mb-2"
+                                class="block text-white text-sm mb-2 font-sans font-extrabold"
                                 for="message"
                             >
                                 Message
                             </label>
                             <textarea
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 h-40 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                                 id="message"
                                 type="text"
                                 name="message"

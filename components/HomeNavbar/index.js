@@ -27,13 +27,16 @@ export const NAVIGATION = [
     },
 ];
 
-function Navbar() {
+function HomeNavbar() {
     return (
         <div>
-            <header className="bg-black p-4 h-20 flex flex-row justify-between items-center border-b-2 border-gray-border fixed w-full">
-                <a href="/">
+            <header className="p-4 bg-transparent h-20 flex flex-row justify-between items-center mt-8 fixed w-full">
+                <div className="flex flex-row items-center justify-around ml-12">
                     <img src="/logo.svg" alt="logo" />
-                </a>
+                    <p className="font-serif font-extrabold text-md text-white ml-4">
+                        Columbia Venture Community <br /> Japan Chapter
+                    </p>
+                </div>
                 <div>
                     {NAVIGATION.map(({ name, route }) => (
                         <a
@@ -51,4 +54,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default HomeNavbar;
