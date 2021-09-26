@@ -14,7 +14,7 @@ export default function members({ data }) {
             <h1 className="font-serif font-extrabold text-5xl ml-8 mt-32 text-white">
                 Members
             </h1>
-            <h5 className="font-sans font-medium text-sm ml-8 text-gray-text">
+            <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
                 Here’s the list of CVC Japan members. Feel free to send
                 messages.
             </h5>

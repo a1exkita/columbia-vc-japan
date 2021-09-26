@@ -22,12 +22,12 @@ export default function events({ data }) {
             <h1 className="font-serif font-extrabold text-5xl ml-8 mt-32 text-white">
                 Events
             </h1>
-            <h5 className="font-sans font-medium text-sm ml-8 text-gray-text">
+            <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
                 We hold events every month. Here’re our reports for the past
                 events.
             </h5>
             <div className="flex flex-col text-white">
-                <h1 className="font-serif font-extrabold text-4xl my-8 text-white text-center">
+                <h1 className="font-serif font-extrabold text-4xl my-16 text-white text-center">
                     Upcoming Events
                 </h1>
                 {data.events
@@ -59,24 +59,26 @@ export default function events({ data }) {
                                     <p className="my-4 font-sans fonts-medium text-sm w-7/12 mt-8">
                                         {event.summary}
                                     </p>
-                                    {/* <a href={event.registrationLink}>
-                                        <div className="rounded bg-blue-highlight text-black w-36 h-12 justify-center iteams-center flex-col flex">
-                                            <p className="text-md font-sans font-extrabold text-black text-center">
-                                                REGISTER
-                                            </p>
-                                        </div>
-                                    </a> */}
-                                    <a href="https://www.buymeacoffee.com/cvcjp">
-                                        <img
-                                            className="w-40"
-                                            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
-                                        />
-                                    </a>
+                                    <div className="flex flex-row justify-between items-center w-7/12">
+                                        <a href={event.registrationLink}>
+                                            <div className="rounded bg-blue-highlight hover:bg-blue-homeblue text-black w-36 h-10 justify-center iteams-center flex-col flex">
+                                                <p className="text-md font-sans font-extrabold text-black text-center">
+                                                    REGISTER
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="https://www.buymeacoffee.com/cvcjp">
+                                            <img
+                                                className="w-40"
+                                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                            />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ))}
-                <h1 className="font-serif font-extrabold text-4xl  mt-16 mb-8  text-white text-center">
+                <h1 className="font-serif font-extrabold text-4xl mt-20 mb-16  text-white text-center">
                     Past Events
                 </h1>
                 {data.events
@@ -108,12 +110,14 @@ export default function events({ data }) {
                                     <p className="my-4 font-sans fonts-medium text-sm w-7/12 mt-8">
                                         {event.summary}
                                     </p>
-                                    <a href="https://www.buymeacoffee.com/cvcjp">
-                                        <img
-                                            className="w-40"
-                                            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
-                                        />
-                                    </a>
+                                    <div className="flex flex-row justify-end w-7/12 ">
+                                        <a href="https://www.buymeacoffee.com/cvcjp">
+                                            <img
+                                                className="w-40 h-10"
+                                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                            />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

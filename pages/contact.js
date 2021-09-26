@@ -36,13 +36,20 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-black min-h-screen">
-            <Navbar />
+        <div className="bg-black min-h-screen flex flex-col bg-black min-h-screen w-full">
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
             </Head>
-            <div className="flex flex-col items-center justify-center pt-36 ">
+            <Navbar />
+
+            <h1 className="font-serif font-extrabold text-5xl ml-8 mt-32 text-white">
+                Contacts
+            </h1>
+            <h5 className="font-sans font-medium text-sm mt-4 ml-8 w-5/12 text-gray-text">
+                Send messages to us from here! We will reach you out soon!
+            </h5>
+            <div className="flex flex-col items-center justify-center pt-4 ">
                 {toast && (
                     <p className="border-t-4 bg-green-300 border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md">
                         Sent message!
@@ -107,7 +114,7 @@ export default function Contact() {
                         </div>
                         <div class="flex items-center justify-between">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                class=" text-black bg-blue-highlight hover:bg-blue-homeblue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 type="submit"
                             >
                                 Send
