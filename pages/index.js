@@ -13,14 +13,10 @@ export default function Home() {
             <div className="flex flex-row items-center justify-around min-h-screen w-full  animate-fade-in-down">
                 <div className="flex flex-col">
                     <h1 className="w-2/5 font-serif font-extrabold ml-48 mt-40 text-8xl text-white">
-                        Connect. Talk. Build.
+                        Connect. Build. Empower.
                     </h1>
                     <p className="font-sans font-light text-white mt-8 ml-48 ">
-                        Founded in 2006, Columbia Venture Community (CVC) is a
-                        private, global network of more than 6,000 Columbia
-                        University alumni, students, and staff who are
-                        interested in all aspects of entrepreneurship and
-                        innovation.
+                        The Japan Chapter of Columbia Venture Community (CVC) was launched in 2020 with a mission to foster entrepreneurship and innovation in Japan. CVC Japan aims to contribute to the entrepreneurial ecosystem in Japan through its activities and community.
                     </p>
                     <a href="/events">
                         <div className="flex flex-row text-white font-sans h-12 justify-start space-x-8 items-center font-extrabold ml-48 mt-8 text-3xl">
@@ -37,22 +33,14 @@ export default function Home() {
                         WHO WE ARE
                     </h1>
                     <p className="font-sans font-light text-lg w-96 justify-start text-white">
-                        Founded in 2006, Columbia Venture Community (CVC) is a
-                        private, global network of more than 6,000 Columbia
-                        University alumni, students, and staff who are
-                        interested in all aspects of entrepreneurship and
-                        innovation.
+                        Columbia Venture Community (CVC) Japan is a regional chapter and a part of the global network of Columbia Venture Community. Columbia Venture Community was founded at Columbia Business School. Since then, it has been one of the largest and most inclusive entrepreneurship-focused communities in the Columbia innovation ecosystem — serving nearly 6,000 members globally in 50+ countries.
                     </p>
                 </div>
             </div>
             <div className="bg-black flex flex-col">
                 <div className="flex flex-row items-center justify-center py-16">
                     <p className="font-sans font-light text-lg w-96 text-white">
-                        Founded in 2006, Columbia Venture Community (CVC) is a
-                        private, global network of more than 6,000 Columbia
-                        University alumni, students, and staff who are
-                        interested in all aspects of entrepreneurship and
-                        innovation.
+                        CVC Japan creates a supportive community to connect individuals and organizes events including startup founder talks, speaker panels, startup pitch events, innovation seminars, and more.
                     </p>
                     <h1 className="w-2/5 font-sans font-extrabold text-5xl pl-64  text-white">
                         WHAT WE DO
