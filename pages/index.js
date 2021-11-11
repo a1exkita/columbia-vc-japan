@@ -34,7 +34,7 @@ export default function Home() {
                     </h1>
                     <p className="font-sans font-light text-lg w-96 justify-start text-white">
                         Columbia Venture Community (CVC) Japan is a regional chapter and a part of the global network of Columbia Venture Community. Columbia Venture Community was founded at Columbia Business School. Since then, it has been one of the largest and most inclusive entrepreneurship-focused communities in the Columbia innovation ecosystem — serving nearly 6,000 members globally in 50+ countries.
-                        <br>🎉<i>We got featured in <a href="https://columbiaventurecommunity.com/annual-report"><u>2021 Annual Report</u></a> released by CVC Global Board.</i>
+                        <br/>🎉<i>We got featured in <a href="https://columbiaventurecommunity.com/annual-report"><u>2021 Annual Report</u></a> released by CVC Global Board.</i>
                     </p>
                 </div>
             </div>
