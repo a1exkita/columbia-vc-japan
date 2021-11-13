@@ -15,8 +15,7 @@ export default function members({ data }) {
                 Members
             </h1>
             <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
-                Here’s the list of CVC Japan members. Feel free to send
-                messages.
+                We are delighted to have those individuals in our community including founders, CEOs of startups and companies that recently exited, investors, accelerators, and more.
             </h5>
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
                 {data.members.map((member) => (
