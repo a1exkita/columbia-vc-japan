@@ -21,9 +21,7 @@ export default function Partners({ data }) {
                 Partners
             </h1>
             <h5 className="font-sans font-medium text-sm mt-4 ml-8 w-5/12 text-gray-text">
-                Together with the following organizations, we work to foster a
-                community-oriented approach to entrepreneurship and innovation
-                for the betterment of the entire Columbia community.
+                Together with the following organizations, we work to foster a community-oriented approach to entrepreneurship and innovation for the betterment of the Columbia and entrepreneurial community in Japan.
             </h5>
             <div className="grid grid-cols-3 gap-4 px-32 text-white mt-16">
                 {data.companies.map((company) => (
