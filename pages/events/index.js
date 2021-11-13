@@ -23,8 +23,7 @@ export default function events({ data }) {
                 Events
             </h1>
             <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
-                We hold events every month. Here’re our reports for the past
-                events.
+                We hold events regularly. Here are event reports, recordings, and presentation materials of the previous events.
             </h5>
             <div className="flex flex-col text-white">
                 <h1 className="font-serif font-extrabold text-4xl my-16 text-white text-center">
