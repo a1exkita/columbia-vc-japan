@@ -13,10 +13,10 @@ export const NAVIGATION = [
         name: "Members",
         route: "/members",
     },
-    {
+    /*{
         name: "Jobs",
         route: "/jobs",
-    },
+    },*/
     {
         name: "Partners",
         route: "/partners",
