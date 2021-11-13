@@ -47,7 +47,7 @@ export default function Contact() {
                 Contacts
             </h1>
             <h5 className="font-sans font-medium text-sm mt-4 ml-8 w-5/12 text-gray-text">
-                Send messages to us from here! We will reach you out soon!
+                If you have any inquiries, please feel free to contact us!
             </h5>
             <div className="flex flex-col items-center justify-center pt-4 ">
                 {toast && (
