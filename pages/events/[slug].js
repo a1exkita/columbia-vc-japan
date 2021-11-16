@@ -45,9 +45,12 @@ export default function events({ event }) {
                             {event.author.name} on {report_date}
                         </p>
                     </div>
-                    <div className="h-auto w-9/12 mt-4 flex flex-col space-between font-sans font-medium">
+                    <p
+                        id="report"
+                        className="h-auto w-9/12 mt-4 flex flex-col items-center space-between font-sans font-medium"
+                    >
                         {parse(event.report.html)}
-                    </div>
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,1 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@300;500;800&display=swap');
+
+#report a {
+    text-decoration:underline;
+}

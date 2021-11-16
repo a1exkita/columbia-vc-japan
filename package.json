@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "0.3.2",
     "emailjs-com": "3.2.0",
     "graphql": "15.6.0",
     "graphql-request": "3.5.0",
