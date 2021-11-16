@@ -74,6 +74,9 @@ export default function Home() {
             {/* MailChimp Code for Mailing List */}
             <main className="bg-black flex flex-col items-center justify-center w-full flex-1 px-20 text-center font-sans font-medium py-8">
                 <div className="flex flex-col">
+                    <p className="font-sans font-extrabold text-white text-5xl my-8">
+                        JOIN OUR COMMUNITY
+                    </p>
                     <form
                         action="https://cvcjp.us5.list-manage.com/subscribe/post?u=5dec989adf2fb67035d4b7bfb&amp;id=2363abf302"
                         method="post"
@@ -81,39 +84,21 @@ export default function Home() {
                         name="mc-embedded-subscribe-form"
                         class="validate"
                         target="_blank"
+                        className=""
                     >
-                        <p className="font-sans font-extrabold text-white text-5xl my-8">
-                            JOIN OUR COMMUNITY
+                        <p className="font-sans font-light text-white text-lg mt-4 mb-4">
+                            Answer the following questions and join our
+                            community! 🚀
                         </p>
-                        <p className="font-sans font-light text-white text-lg my-8">
-                            You can join our mailing list by providing with your
-                            email in the following input.
-                        </p>
-                        <div className="flex flex-row justify-around mb-4">
-                            <input
-                                type="email"
-                                name="EMAIL"
-                                class="rounded w-96 px-4"
-                                placeholder="email address"
-                                oninvalid="this.setCustomValidity('Enter Email Here')"
-                                oninput="this.setCustomValidity('')"
-                                required
-                            />
-                            <div className="text-white bg-blue-homeblue rounded p-2">
-                                <input
-                                    type="submit"
-                                    value="Subscribe"
-                                    name="subscribe"
-                                    className="rounded bg-blue-homeblue"
-                                />
-                            </div>
-                        </div>
-                        <div className="font-sans font-light text-white text-lg mc-field-group input-group mb-8 ml-8">
+                        <div className="text-white flex justify-start">
                             <strong>
-                                Are you Columbia University's Affiliates?{" "}
+                                Are you Columbia University's
+                                affiliates(students, faculty, and staff)?{" "}
                                 <span className="asterisk">*</span>
                             </strong>
-                            <ul>
+                        </div>
+                        <div className="font-sans font-light flex flex-col items-start text-white text-lg mc-field-group input-group mb-2">
+                            <ul className="list-none flex flex-col items-start mt-2">
                                 <li>
                                     <input
                                         type="radio"
@@ -124,7 +109,7 @@ export default function Home() {
                                         oninput="this.setCustomValidity('')"
                                         required
                                     />
-                                    <label for="mce-MMERGE6-0">
+                                    <label className="ml-2" for="mce-MMERGE6-0">
                                         Columbia affiliates
                                     </label>
                                 </li>
@@ -135,49 +120,36 @@ export default function Home() {
                                         name="MMERGE6"
                                         id="mce-MMERGE6-1"
                                     />
-                                    <label for="mce-MMERGE6-1">
+                                    <label className="ml-2" for="mce-MMERGE6-1">
                                         Non-affiliates
                                     </label>
                                 </li>
                             </ul>
-                            {/* 
-                            <ul>
-                                <li>
-                                    <input
-                                        type="radio"
-                                        value="1"
-                                        name="group[29620][1]"
-                                        id="mce-group[29620]-29620-0"
-                                    />
-                                    <label for="mce-group[29620]-29620-0">
-                                        Columbia affiliates
-                                    </label>
-                                </li>
-                                <li>
-                                    <input
-                                        type="radio"
-                                        value="2"
-                                        name="group[29620][1]"
-                                        id="mce-group[29620]-29620-1"
-                                    />
-                                    <label for="mce-group[29620]-29620-1">
-                                        Non-affiliates
-                                    </label>
-                                </li>
-                            </ul>
+                        </div>
+                        <div className="text-white flex justify-start mb-2">
+                            <strong>
+                                Your Email Address{" "}
+                                <span className="asterisk">*</span>
+                            </strong>
+                        </div>
+                        <div className="text-white flex flex-row justify-start mb-4">
                             <input
-                                type="checkbox"
-                                value="1"
-                                name="group[29620][1]"
-                                id="mce-group[29620]-29620-0"
+                                type="email"
+                                name="EMAIL"
+                                class="rounded w-96 px-4"
+                                placeholder="Type your email address"
+                                oninvalid="this.setCustomValidity('Enter Email Here')"
+                                oninput="this.setCustomValidity('')"
+                                required
                             />
-                            <label
-                                for="mce-group[29620]-29620-0"
-                                className="ml-2"
-                            >
-                                Are you Columbia University's affiliates
-                                (students, faculty and staff)?
-                            </label> */}
+                            <div className="text-white bg-blue-homeblue rounded p-2 ml-4">
+                                <input
+                                    type="submit"
+                                    value="Subscribe"
+                                    name="subscribe"
+                                    className="rounded bg-blue-homeblue"
+                                />
+                            </div>
                         </div>
                     </form>
                 </div>
