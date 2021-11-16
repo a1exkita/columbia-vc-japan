@@ -23,7 +23,8 @@ export default function events({ data }) {
                 Events
             </h1>
             <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
-                We hold events regularly. Here are event reports, recordings, and presentation materials of the previous events.
+                We hold events regularly. Here are event reports, recordings,
+                and presentation materials of the previous events.
             </h5>
             <div className="flex flex-col text-white">
                 <h1 className="font-serif font-extrabold text-4xl my-16 text-white text-center">
@@ -31,6 +32,7 @@ export default function events({ data }) {
                 </h1>
                 {data.events
                     .filter((event) => now < Date.parse(event.date))
+                    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                     .map((event) => (
                         <div key={event.slug}>
                             <div className="flex flex-row justify-items-center mx-8">
@@ -82,6 +84,7 @@ export default function events({ data }) {
                 </h1>
                 {data.events
                     .filter((event) => now >= Date.parse(event.date))
+                    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                     .map((event) => (
                         <div key={event.slug} className="mb-12">
                             <div className="flex flex-row justify-items-center mx-8">
