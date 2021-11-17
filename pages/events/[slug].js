@@ -10,10 +10,21 @@ const enum_type = {
     PANNEL_SESSION: "Panel Session",
 };
 
+function createYouTubeEmbedLink(link) {
+    return link.replace(
+        "http://www.youtube.com/watch?v=",
+        "http://www.youtube.com/embed/"
+    );
+}
+
 export default function events({ event }) {
     const report_date = new Date(event.updatedAt).toLocaleDateString("en-US", {
         timeZone: "EST",
     });
+    var link = "";
+    if (event.videoLink) {
+        link = createYouTubeEmbedLink(event.videoLink);
+    }
     return (
         <div className="h-full w-full bg-black pb-8">
             <Head>
@@ -45,6 +56,17 @@ export default function events({ event }) {
                             {event.author.name} on {report_date}
                         </p>
                     </div>
+                    {event.videoLink && (
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/DSGyEsJ17cI"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    )}
                     <p
                         id="report"
                         className="h-auto w-9/12 mt-4 flex flex-col items-center space-between font-sans font-medium"
@@ -83,6 +105,7 @@ export const getStaticProps = async ({ params }) => {
                 }
                 articleType
                 summary
+                videoLink
             }
         }
     `;

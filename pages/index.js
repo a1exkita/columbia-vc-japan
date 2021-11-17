@@ -132,7 +132,7 @@ export default function Home() {
                                 <span className="asterisk">*</span>
                             </strong>
                         </div>
-                        <div className="text-white flex flex-row justify-start mb-4">
+                        <div className="text-black flex flex-row justify-start mb-4">
                             <input
                                 type="email"
                                 name="EMAIL"
