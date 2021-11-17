@@ -15,30 +15,97 @@ export default function members({ data }) {
                 Members
             </h1>
             <h5 className="font-sans font-medium text-sm ml-8 mt-4 text-gray-text">
-                We are delighted to have those individuals in our community including founders, CEOs of startups and companies that recently exited, investors, accelerators, and more.
+                We are delighted to have those individuals in our community
+                including founders, CEOs of startups and companies that recently
+                exited, investors, accelerators, and more.
             </h5>
+            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-8 text-white">
+                CVC Japan Team
+            </h1>
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
-                {data.members.map((member) => (
-                    <div key={member.slug}>
-                        <a href={"/members/" + member.slug}>
-                            <div className="max-w-sm m-4 h-full lg:m-0 rounded overflow-hidden shadow-lg bg-gray-dark border border-gray-border hover:border-blue-highlight">
-                                <img
-                                    className="h-60 w-full object-cover"
-                                    src={member.image.url}
-                                    alt="img"
-                                />
-                                <div className="px-6 py-4">
-                                    <div className="text-xl text-white mb-2 font-extrabold">
-                                        {member.name}
+                {data.members
+                    .filter((member) => member.type == "team")
+                    .sort((a, b) => b.priority - a.priority)
+                    .map((member) => (
+                        <div key={member.slug}>
+                            <a href={"/members/" + member.slug}>
+                                <div className="max-w-sm m-4 h-full lg:m-0 rounded overflow-hidden shadow-lg bg-gray-dark border border-gray-border hover:border-blue-highlight">
+                                    <img
+                                        className="h-60 w-full object-cover"
+                                        src={member.image.url}
+                                        alt="img"
+                                    />
+                                    <div className="px-6 py-4">
+                                        <div className="text-xl text-white mb-2 font-extrabold">
+                                            {member.name}
+                                        </div>
+                                        <p className="text-white text-base">
+                                            {member.title} @ {member.company}
+                                        </p>
                                     </div>
-                                    <p className="text-white text-base">
-                                        {member.title} @ {member.company}
-                                    </p>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                ))}
+                            </a>
+                        </div>
+                    ))}
+            </div>
+
+            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
+                Speakers
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
+                {data.members
+                    .filter((member) => member.type == "speakers")
+                    .sort((a, b) => b.priority - a.priority)
+                    .map((member) => (
+                        <div key={member.slug}>
+                            <a href={"/members/" + member.slug}>
+                                <div className="max-w-sm m-4 h-full lg:m-0 rounded overflow-hidden shadow-lg bg-gray-dark border border-gray-border hover:border-blue-highlight">
+                                    <img
+                                        className="h-60 w-full object-cover"
+                                        src={member.image.url}
+                                        alt="img"
+                                    />
+                                    <div className="px-6 py-4">
+                                        <div className="text-xl text-white mb-2 font-extrabold">
+                                            {member.name}
+                                        </div>
+                                        <p className="text-white text-base">
+                                            {member.title} @ {member.company}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
+            </div>
+            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
+                Community Members
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
+                {data.members
+                    .filter((member) => member.type == "members")
+                    .sort((a, b) => b.priority - a.priority)
+                    .map((member) => (
+                        <div key={member.slug}>
+                            <a href={"/members/" + member.slug}>
+                                <div className="max-w-sm m-4 h-full lg:m-0 rounded overflow-hidden shadow-lg bg-gray-dark border border-gray-border hover:border-blue-highlight">
+                                    <img
+                                        className="h-60 w-full object-cover"
+                                        src={member.image.url}
+                                        alt="img"
+                                    />
+                                    <div className="px-6 py-4">
+                                        <div className="text-xl text-white mb-2 font-extrabold">
+                                            {member.name}
+                                        </div>
+                                        <p className="text-white text-base">
+                                            {member.title} @ {member.company}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    ))}
             </div>
         </div>
     );
@@ -60,6 +127,8 @@ export const getStaticProps = async ({ params }) => {
                 image {
                     url
                 }
+                priority
+                type
             }
         }
     `;
