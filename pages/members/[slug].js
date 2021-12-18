@@ -59,42 +59,52 @@ export default function members({ member }) {
                                 {member.bio}
                             </p>
                         </div>
-                        <div className="flex flex-col my-4">
-                            <h3 className="text-white text-3xl font-extrabold">
-                                Social Media
-                            </h3>
-                            <div className="flex flex-row items-center justify-between w-40 mt-2">
-                                <a href={member.linkedIn}>
-                                    <img
-                                        className="w-12 h-auto"
-                                        src="/linkedIn.svg"
-                                        alt="linkedIn"
-                                    />
-                                </a>
-                                <a href={member.twitter}>
-                                    <img
-                                        className="w-12 h-auto"
-                                        src="/twitter.svg"
-                                        alt="twitter"
-                                    />
-                                </a>
-                                <a href={member.instagram}>
-                                    <img
-                                        className="w-10 h-auto"
-                                        src="/instagram.svg"
-                                        alt="instagram"
-                                    />
-                                </a>
-                                {/* {socialIcons.map(({ url, n }) => {
-                                    <img
-                                        key={n}
-                                        className="w-24 h-auto"
-                                        src={"/" + url}
-                                        alt={n}
-                                    />;
-                                })} */}
+                        {(member.linkedIn ||
+                            member.twitter ||
+                            member.instagram) && (
+                            <div className="flex flex-col my-4">
+                                <h3 className="text-white text-3xl font-extrabold">
+                                    Social Media
+                                </h3>
+                                <div className="flex flex-row items-center justify-between w-40 mt-2">
+                                    {member.linkedIn && (
+                                        <a href={member.linkedIn}>
+                                            <img
+                                                className="w-12 h-auto"
+                                                src="/linkedIn.svg"
+                                                alt="linkedIn"
+                                            />
+                                        </a>
+                                    )}
+                                    {member.twitter && (
+                                        <a href={member.twitter}>
+                                            <img
+                                                className="w-12 h-auto"
+                                                src="/twitter.svg"
+                                                alt="twitter"
+                                            />
+                                        </a>
+                                    )}
+                                    {member.instagram && (
+                                        <a href={member.instagram}>
+                                            <img
+                                                className="w-10 h-auto"
+                                                src="/instagram.svg"
+                                                alt="instagram"
+                                            />
+                                        </a>
+                                    )}
+                                    {/* {socialIcons.map(({ url, n }) => {
+                                <img
+                                    key={n}
+                                    className="w-24 h-auto"
+                                    src={"/" + url}
+                                    alt={n}
+                                />;
+                            })} */}
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
