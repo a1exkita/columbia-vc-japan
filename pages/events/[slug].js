@@ -47,14 +47,18 @@ export default function events({ event }) {
                         <p className="font-serif text-5xl text-center">
                             {event.title}
                         </p>
-                        <img
-                            className="object-cover h-20 w-20 rounded-full my-4"
-                            src={event.author.image.url}
-                            alt="author_img"
-                        ></img>
-                        <p>
-                            {event.author.name} on {report_date}
-                        </p>
+                        {event.author && (
+                            <>
+                                <img
+                                    className="object-cover h-20 w-20 rounded-full my-4"
+                                    src={event.author.image.url}
+                                    alt="author_img"
+                                ></img>
+                                <p>
+                                    {event.author.name} on {report_date}
+                                </p>
+                            </>
+                        )}
                     </div>
                     {event.videoLink && (
                         <div className="my-8">
