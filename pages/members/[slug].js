@@ -66,7 +66,7 @@ export default function members({ member }) {
                                 <h3 className="text-white text-3xl font-extrabold">
                                     Social Media
                                 </h3>
-                                <div className="flex flex-row items-center justify-between w-40 mt-2">
+                                <div className="flex flex-row items-center justify-around w-40 mt-2">
                                     {member.linkedIn && (
                                         <a href={member.linkedIn}>
                                             <img
