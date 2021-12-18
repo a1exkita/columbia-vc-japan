@@ -12,8 +12,8 @@ const enum_type = {
 
 function createYouTubeEmbedLink(link) {
     return link.replace(
-        "http://www.youtube.com/watch?v=",
-        "http://www.youtube.com/embed/"
+        "https://www.youtube.com/watch?v=",
+        "https://www.youtube.com/embed/"
     );
 }
 
@@ -57,15 +57,17 @@ export default function events({ event }) {
                         </p>
                     </div>
                     {event.videoLink && (
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/DSGyEsJ17cI"
-                            title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
+                        <div className="my-8">
+                            <iframe
+                                width="560"
+                                height="315"
+                                src={link}
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
                     )}
                     <p
                         id="report"

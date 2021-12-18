@@ -52,7 +52,7 @@ export default function events({ data }) {
                                             {event.date}
                                         </p>
                                     </div>
-                                    <a href={event.registrationLink}>
+                                    <a href={"/events/" + event.slug}>
                                         <h1 className="text-white font-serif text-4xl w-7/12 hover:underline">
                                             {event.title}
                                         </h1>
