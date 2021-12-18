@@ -68,10 +68,14 @@ export default function events({ data }) {
                                                 </p>
                                             </div>
                                         </a>
-                                        <a href="https://www.buymeacoffee.com/cvcjp">
+                                        <a
+                                            href="https://www.buymeacoffee.com/cvcjp"
+                                            target="_blank"
+                                        >
                                             <img
-                                                className="w-40"
-                                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                                className="w-32 h-8"
+                                                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                                                alt="Buy Me A Coffee"
                                             />
                                         </a>
                                     </div>
@@ -113,10 +117,14 @@ export default function events({ data }) {
                                         {event.summary}
                                     </p>
                                     <div className="flex flex-row justify-end w-7/12 ">
-                                        <a href="https://www.buymeacoffee.com/cvcjp">
+                                        <a
+                                            href="https://www.buymeacoffee.com/cvcjp"
+                                            target="_blank"
+                                        >
                                             <img
-                                                className="w-40 h-10"
-                                                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cvcjp&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                                                className="w-32 h-8"
+                                                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                                                alt="Buy Me A Coffee"
                                             />
                                         </a>
                                     </div>
