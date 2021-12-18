@@ -79,7 +79,7 @@ export default function members({ data }) {
                     ))}
             </div>
 
-            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
+            {/* <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
                 Speakers
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
@@ -107,7 +107,7 @@ export default function members({ data }) {
                             </a>
                         </div>
                     ))}
-            </div>
+            </div> */}
             <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
                 Community Members
             </h1>
