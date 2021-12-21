@@ -21,7 +21,7 @@ const socialIcons = [
 
 export default function members({ member }) {
     return (
-        <div className="absolute h-full bg-black">
+        <div className="lg:absolute h-full bg-black">
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
@@ -33,9 +33,9 @@ export default function members({ member }) {
                         {"<"} Back to members
                     </a>
                 </div>
-                <div className="flex flex-row h-full mx-8">
+                <div className="flex flex-col lg:flex-row h-full mx-8">
                     <img
-                        className="m-4 w-1/5 object-cover"
+                        className="m-4 lg:w-1/5 object-cover"
                         src={member.image.url}
                         alt="img"
                     />
@@ -66,7 +66,7 @@ export default function members({ member }) {
                                 <h3 className="text-white text-3xl font-extrabold">
                                     Social Media
                                 </h3>
-                                <div className="flex flex-row items-center justify-around w-40 mt-2">
+                                <div className="flex flex-row items-center justify-around lg:w-40 mt-2">
                                     {member.linkedIn && (
                                         <a href={member.linkedIn}>
                                             <img

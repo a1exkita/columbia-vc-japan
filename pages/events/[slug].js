@@ -32,15 +32,15 @@ export default function events({ event }) {
                 <link rel="icon" href="/logo.png" />
             </Head>
             <Navbar />
-            <div className="text-white font-sans font-extrabold mx-8 pt-32">
+            <div className="text-white font-sans font-extrabold mx-2 lg:mx-8 pt-32">
                 <a className="m-4" href="/events">
                     {"<"} Back to events
                 </a>
             </div>
 
             <div className="flex flex-col items-center text-white">
-                <div className="flex flex-col items-center w-4/6">
-                    <div className="flex flex-col items-center w-6/12">
+                <div className="flex flex-col items-center lg:w-4/6">
+                    <div className="flex flex-col items-center lg:w-6/12">
                         <p className="font-serif text-2xl my-4 text-blue-highlight">
                             {enum_type[event.articleType]}
                         </p>
@@ -63,8 +63,9 @@ export default function events({ event }) {
                     {event.videoLink && (
                         <div className="my-8">
                             <iframe
-                                width="560"
-                                height="315"
+                                className="w-64 h-44 lg:w-96 lg:h-64"
+                                // width="560"
+                                // height="315"
                                 src={link}
                                 title="YouTube video player"
                                 frameborder="0"

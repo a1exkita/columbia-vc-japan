@@ -36,7 +36,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-black min-h-screen flex flex-col bg-black min-h-screen w-full">
+        <div className="bg-black min-h-screen flex flex-col w-full">
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />

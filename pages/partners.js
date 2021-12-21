@@ -28,7 +28,7 @@ export default function Partners({ data }) {
                 for the betterment of the Columbia and entrepreneurial community
                 in Japan.
             </h5>
-            <div className="grid grid-cols-3 gap-4 px-32 text-white mt-16">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 lg:px-32 text-white mt-16">
                 {data.companies.map(function (company) {
                     return (
                         <div key={company.id}>
