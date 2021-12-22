@@ -16,10 +16,13 @@ export default function Home() {
                 />
                 <meta
                     property="og:title"
-                    content="Columbia Venture Community Japan Chapter Website"
+                    content="Columbia Venture Community Japan Chapter"
                 />
                 <meta name="twitter:card" content="summary" />
-                <meta property="og:description" content="Preview is Working" />
+                <meta
+                    property="og:description"
+                    content="Connect. Build. Empower."
+                />
                 <meta property="og:image" content="/preview.jpg" />
             </Head>
             <HomeNavbar />
