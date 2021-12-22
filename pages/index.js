@@ -13,7 +13,11 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center justify-around min-h-screen w-full  animate-fade-in-down">
                 <div className="flex flex-col">
                     <h1 className="w-full lg:w-2/5 font-serif bg-lion bg-no-repeat bg-right-top lg:bg-none font-extrabold text-6xl mt-24 p-4 lg:ml-48 lg:mt-40 lg:text-8xl text-white">
-                        Connect. Build. Empower.
+                        Connect.
+                        <br />
+                        Build.
+                        <br />
+                        Empower.
                     </h1>
                     <p className="font-sans font-light text-white mt-16 mx-8 lg:ml-48 ">
                         The Japan Chapter of Columbia Venture Community (CVC)
