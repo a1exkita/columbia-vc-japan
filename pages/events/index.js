@@ -39,7 +39,7 @@ export default function events({ data }) {
                                 <div className="flex flex-col lg:h-64 lg:w-1/2 items-center">
                                     <a
                                         className="flex flex-col lg:h-64 items-center lg:ml-12 lg:pl-20"
-                                        href={"/events/" + event.slug}
+                                        href={event.registrationLink}
                                     >
                                         <img
                                             className="w-full h-auto lg:h-full lg:w-auto mb-4 lg:mg-0  object-cover"
@@ -57,7 +57,7 @@ export default function events({ data }) {
                                             {event.date}
                                         </p>
                                     </div>
-                                    <a href={"/events/" + event.slug}>
+                                    <a href={event.registrationLink}>
                                         <h1 className="text-white font-serif text-3xl lg:text-4xl lg:w-7/12 hover:underline">
                                             {event.title}
                                         </h1>
