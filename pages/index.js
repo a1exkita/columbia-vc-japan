@@ -8,6 +8,22 @@ export default function Home() {
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
+                <meta property="og:url" content="https://www.cvcjp.com/" />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="fb:app_id"
+                    content={process.env.FACEBOOK_APP_ID}
+                />
+                <meta
+                    property="og:title"
+                    content="Columbia Venture Community Japan Chapter"
+                />
+                <meta name="twitter:card" content="summary" />
+                <meta
+                    property="og:description"
+                    content="Connect. Build. Empower."
+                />
+                <meta property="og:image" content="/preview.jpg" />
             </Head>
             <HomeNavbar />
             <div className="flex flex-col lg:flex-row items-center justify-around min-h-screen w-full  animate-fade-in-down">
