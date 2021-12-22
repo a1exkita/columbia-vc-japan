@@ -36,12 +36,17 @@ export default function events({ data }) {
                     .map((event) => (
                         <div key={event.slug}>
                             <div className="flex flex-col lg:flex-row justify-items-center mx-8">
-                                <div className="flex flex-col lg:h-64 lg:w-1/2 items-center lg:ml-12 lg:pl-20">
-                                    <img
-                                        className="w-full h-auto lg:h-full lg:w-auto mb-4 lg:mg-0  object-cover"
-                                        src={event.image.url}
-                                        alt="image"
-                                    />
+                                <div className="flex flex-col lg:h-64 lg:w-1/2 items-center">
+                                    <a
+                                        className="flex flex-col lg:h-64 items-center lg:ml-12 lg:pl-20"
+                                        href={"/events/" + event.slug}
+                                    >
+                                        <img
+                                            className="w-full h-auto lg:h-full lg:w-auto mb-4 lg:mg-0  object-cover"
+                                            src={event.image.url}
+                                            alt="image"
+                                        />
+                                    </a>
                                 </div>
                                 <div className="flex flex-col lg:w-1/2">
                                     <div className="flex flex-row justify-between lg:w-7/12  lg:border-t-2 border-white">
@@ -92,12 +97,17 @@ export default function events({ data }) {
                     .map((event) => (
                         <div key={event.slug} className="mb-12">
                             <div className="flex flex-col lg:flex-row justify-items-center mx-8">
-                                <div className="flex flex-col lg:h-64 lg:w-1/2 items-center lg:ml-12 lg:pl-20">
-                                    <img
-                                        className="w-full h-auto lg:h-full lg:w-auto mb-4 lg:mg-0 object-cover"
-                                        src={event.image.url}
-                                        alt="image"
-                                    />
+                                <div className="flex flex-col lg:h-64 lg:w-1/2 items-center">
+                                    <a
+                                        className="flex flex-col lg:h-64 items-center lg:ml-12 lg:pl-20"
+                                        href={"/events/" + event.slug}
+                                    >
+                                        <img
+                                            className="w-full h-auto lg:h-full lg:w-auto mb-4 lg:mg-0  object-cover"
+                                            src={event.image.url}
+                                            alt="image"
+                                        />
+                                    </a>
                                 </div>
                                 <div className="flex flex-col lg:w-1/2">
                                     <div className="flex flex-row justify-between lg:w-7/12  lg:border-t-2 border-white">
