@@ -39,7 +39,7 @@ function HomeNavbar() {
             <header className="flex flex-col w-full">
                 <div
                     className={`${
-                        active ? " bg-blue-homeblue" : "bg-transparent"
+                        active ? "bg-black" : "bg-transparent"
                     } lg:hidden pt-16 pb-16 p-4 h-20 flex flex-row justify-between items-center fixed w-full`}
                 >
                     <img src="/logo.svg" alt="logo" />
@@ -69,7 +69,7 @@ function HomeNavbar() {
                 <div
                     className={`${
                         active
-                            ? "pt-8 animate-fade-in-down-quick items-end overflow-hidden mt-24 flex flex-col ml-8 fixed z-10 px-4 h-full w-full inset-y-0 right-0 bg-black bg-opacity-40"
+                            ? "pt-8 animate-fade-in-down-quick items-end overflow-hidden mt-24 flex flex-col ml-8 fixed z-10 px-4 h-full w-full inset-y-0 right-0 bg-black bg-opacity-90"
                             : "hidden"
                     } `}
                 >

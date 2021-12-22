@@ -7,6 +7,9 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            backgroundImage: {
+                lion: "url('/lion_md.png')",
+            },
             colors: {
                 gray: {
                     dark: "#111111",

@@ -41,7 +41,7 @@ export default function Partners({ data }) {
                                             alt="image"
                                         />
                                     </div>
-                                    <p className="font-serif text-xl text-white mt-8 hover:underline">
+                                    <p className="font-serif text-xl text-center text-white mt-8 hover:underline">
                                         {company.name}
                                     </p>
                                     <p className="my-4 font-sans fonts-medium text-xs w-full mt-8 text-center">
