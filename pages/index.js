@@ -18,7 +18,7 @@ export default function Home() {
                     property="og:title"
                     content="Columbia Venture Community Japan Chapter"
                 />
-                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image" content="/preview.jpg" />
                 <meta
                     property="og:description"
