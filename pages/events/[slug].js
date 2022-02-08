@@ -3,6 +3,7 @@ import { graphcms } from "../../lib/_graphcms";
 import parse from "html-react-parser";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
+import ReactMarkdown from "react-markdown";
 
 const enum_type = {
     GUEST_SPEAKER: "Guest Speaker",
@@ -25,6 +26,8 @@ export default function events({ event }) {
     if (event.videoLink) {
         link = createYouTubeEmbedLink(event.videoLink);
     }
+    const source = event.report.markdown.replace(/\n/gi, "\n &nbsp;");
+
     return (
         <div className="h-full w-full bg-black pb-8">
             <Head>
@@ -74,12 +77,17 @@ export default function events({ event }) {
                             ></iframe>
                         </div>
                     )}
-                    <p
+                    <div className="h-auto w-9/12 mt-4 font-sans font-medium">
+                        <ReactMarkdown>{source}</ReactMarkdown>
+                    </div>
+
+                    {/* <p
                         id="report"
-                        className="h-auto w-9/12 mt-4 flex flex-col items-center space-between font-sans font-medium"
+                        className="h-auto w-9/12 mt-4 flex flex-col space-between font-sans font-medium"
                     >
                         {parse(event.report.html)}
-                    </p>
+                        
+                    </p>  */}
                 </div>
             </div>
         </div>
@@ -109,6 +117,7 @@ export const getStaticProps = async ({ params }) => {
                 date
                 report {
                     html
+                    markdown
                 }
                 articleType
                 summary

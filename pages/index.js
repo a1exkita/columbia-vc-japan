@@ -8,6 +8,9 @@ export default function Home() {
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@atsuhit0" />
+                <meta name="twitter:creator" content="@atsuhit0" />
                 <meta property="og:url" content="https://www.cvcjp.com/" />
                 <meta property="og:type" content="website" />
                 <meta
@@ -18,7 +21,7 @@ export default function Home() {
                     property="og:title"
                     content="Columbia Venture Community Japan Chapter"
                 />
-                <meta name="twitter:card" content="summary" />
+
                 <meta
                     property="og:description"
                     content="Connect. Build. Empower."
