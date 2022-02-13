@@ -20,6 +20,9 @@ module.exports = {
                     highlight: "#35F3FF",
                     homeblue: "#358EFF",
                 },
+                orange: {
+                    coral: "#FDB381",
+                },
             },
             fontFamily: {
                 sans: ["Inter", "sans-serif"],

@@ -26,7 +26,11 @@ export default function events({ event }) {
     if (event.videoLink) {
         link = createYouTubeEmbedLink(event.videoLink);
     }
-    const source = event.report.markdown.replace(/\n/gi, "\n &nbsp;");
+    // const source = event.report.markdown.replace(/\n/gi, "\n &nbsp;");
+    // console.log(source);
+
+    // const ht = event.report.html;
+    // console.log(ht);
 
     return (
         <div className="h-full w-full bg-black pb-8">
@@ -77,8 +81,12 @@ export default function events({ event }) {
                             ></iframe>
                         </div>
                     )}
-                    <div className="h-auto w-9/12 mt-4 font-sans font-medium">
-                        <ReactMarkdown>{source}</ReactMarkdown>
+                    <div
+                        id="report"
+                        className="h-auto w-9/12 mt-4 font-sans font-medium a:text-orange-coral"
+                    >
+                        {parse(event.report.html)}
+                        {/* <ReactMarkdown>{source}</ReactMarkdown> */}
                     </div>
 
                     {/* <p
@@ -117,7 +125,6 @@ export const getStaticProps = async ({ params }) => {
                 date
                 report {
                     html
-                    markdown
                 }
                 articleType
                 summary
