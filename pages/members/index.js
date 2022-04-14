@@ -79,12 +79,12 @@ export default function members({ data }) {
                     ))}
             </div>
 
-            {/* <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
-                Speakers
+            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
+                Columbia Affiliated Members
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
                 {data.members
-                    .filter((member) => member.type == "speakers")
+                    .filter((member) => member.type == "members")
                     .sort((a, b) => b.priority - a.priority)
                     .map((member) => (
                         <div key={member.slug}>
@@ -107,13 +107,16 @@ export default function members({ data }) {
                             </a>
                         </div>
                     ))}
-            </div> */}
-            <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
-                Community Members
-            </h1>
+            </div>
+
+            {data.members.filter((m) => m.type == "speakers").length > 0 && (
+                <h1 className="font-serif font-extrabold text-3xl ml-8 mt-4 text-white">
+                    Speakers
+                </h1>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-4 p-8">
                 {data.members
-                    .filter((member) => member.type == "members")
+                    .filter((member) => member.type == "speakers")
                     .sort((a, b) => b.priority - a.priority)
                     .map((member) => (
                         <div key={member.slug}>
