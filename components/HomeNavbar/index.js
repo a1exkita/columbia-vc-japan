@@ -26,6 +26,10 @@ export const NAVIGATION = [
         name: "Contact",
         route: "/contact",
     },
+    {
+        name: "Donation",
+        route: "https://www.buymeacoffee.com/cvcjp",
+    },
 ];
 
 function HomeNavbar() {
