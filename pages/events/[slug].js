@@ -9,6 +9,7 @@ const enum_type = {
     GUEST_SPEAKER: "Guest Speaker",
     CAREER: "Career",
     PANNEL_SESSION: "Panel Session",
+    SOCIAL_EVENT: "Social Event",
 };
 
 function createYouTubeEmbedLink(link) {
