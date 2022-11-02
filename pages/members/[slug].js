@@ -25,6 +25,23 @@ export default function members({ member }) {
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:url" content="https://www.cvcjp.com/" />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="fb:app_id"
+                    content={process.env.FACEBOOK_APP_ID}
+                />
+                <meta
+                    property="og:title"
+                    content="Columbia Venture Community Japan Chapter"
+                />
+
+                <meta
+                    property="og:description"
+                    content="Connect. Build. Empower."
+                />
+                <meta property="og:image" content="https://cvcjp.s3.us-west-2.amazonaws.com/preview.jpg" />
             </Head>
             <Navbar />
             <div className="flex flex-col">
