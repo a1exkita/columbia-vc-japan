@@ -38,6 +38,23 @@ export default function events({ event }) {
             <Head>
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:url" content={"https://www.cvcjp.com/events/"+ event.slug} />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="fb:app_id"
+                    content={process.env.FACEBOOK_APP_ID}
+                />
+                <meta
+                    property="og:title"
+                    content={event.title}
+                />
+
+                <meta
+                    property="og:description"
+                    content={event.summary}
+                />
+                <meta property="og:image" content={event.image.url} />
             </Head>
             <Navbar />
             <div className="text-white font-sans font-extrabold mx-2 lg:mx-8 pt-32">

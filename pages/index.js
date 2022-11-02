@@ -9,8 +9,6 @@ export default function Home() {
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@atsuhit0" />
-                <meta name="twitter:creator" content="@atsuhit0" />
                 <meta property="og:url" content="https://www.cvcjp.com/" />
                 <meta property="og:type" content="website" />
                 <meta
@@ -26,7 +24,7 @@ export default function Home() {
                     property="og:description"
                     content="Connect. Build. Empower."
                 />
-                <meta property="og:image" content="/preview.jpg" />
+                <meta property="og:image" content="https://cvcjp.s3.us-west-2.amazonaws.com/preview.jpg" />
             </Head>
             <HomeNavbar />
             <div className="flex flex-col lg:flex-row items-center justify-around min-h-screen w-full  animate-fade-in-down">
