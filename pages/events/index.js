@@ -19,7 +19,7 @@ export default function events({ data }) {
                 <title>CVC Japan</title>
                 <link rel="icon" href="/logo.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta property="og:url" content="https://www.cvcjp.com/" />
+                <meta property="og:url" content="https://www.cvcjp.com/events" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="fb:app_id"
